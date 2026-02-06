@@ -1,0 +1,71 @@
+{
+  "experiment_name": "classifier_v5_linearsvm",
+  "run_id": "001",
+  "timestamp": "2026-01-23T19:55:48",
+  "results_root": "/home/daniel-tesfai/Desktop/Training_classifiers/results/classifier_v5_linearsvm/run_001",
+  "artifacts_dir": "/home/daniel-tesfai/Desktop/Training_classifiers/results/classifier_v5_linearsvm/run_001/artifacts",
+  "paths": {
+    "train": "/home/daniel-tesfai/Desktop/Training_classifiers/data/MAMS-ACSA/raw/data_jsonl/annotated/train.jsonl",
+    "val": "/home/daniel-tesfai/Desktop/Training_classifiers/data/MAMS-ACSA/raw/data_jsonl/annotated/val.jsonl",
+    "test": "/home/daniel-tesfai/Desktop/Training_classifiers/data/MAMS-ACSA/raw/data_jsonl/annotated/test.jsonl"
+  },
+  "data_sizes": {
+    "train_rows": 7096,
+    "val_rows": 886,
+    "test_rows": 901
+  },
+  "labels": {
+    "emotion_names": [
+      "admiration",
+      "annoyance",
+      "disappointment",
+      "disgust",
+      "gratitude",
+      "mentioned_only",
+      "mixed_emotions",
+      "neutral",
+      "satisfaction"
+    ],
+    "num_classes": 9
+  },
+  "vectorizer_params": {
+    "analyzer": "word",
+    "binary": false,
+    "decode_error": "strict",
+    "dtype": "float64",
+    "encoding": "utf-8",
+    "input": "content",
+    "lowercase": true,
+    "max_df": 0.95,
+    "max_features": null,
+    "min_df": 2,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "norm": "l2",
+    "preprocessor": null,
+    "smooth_idf": true,
+    "stop_words": null,
+    "strip_accents": "unicode",
+    "sublinear_tf": true,
+    "token_pattern": "(?u)\\b\\w\\w+\\b",
+    "tokenizer": null,
+    "use_idf": true,
+    "vocabulary": null
+  },
+  "model_params": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "dual": "auto",
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "loss": "squared_hinge",
+    "max_iter": 10000,
+    "multi_class": "ovr",
+    "penalty": "l2",
+    "random_state": null,
+    "tol": 0.0001,
+    "verbose": 0
+  }
+}

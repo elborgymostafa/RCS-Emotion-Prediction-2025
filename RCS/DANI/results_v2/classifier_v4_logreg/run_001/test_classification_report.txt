@@ -1,0 +1,15 @@
+                precision    recall  f1-score   support
+
+    admiration     0.3441    0.2832    0.3107       113
+     annoyance     0.6162    0.7011    0.6559       174
+disappointment     0.2727    0.3140    0.2919        86
+       disgust     0.0000    0.0000    0.0000         3
+     gratitude     0.0000    0.0000    0.0000         2
+mentioned_only     0.6831    0.6416    0.6617       346
+mixed_emotions     0.0000    0.0000    0.0000         1
+       neutral     0.1915    0.3830    0.2553        47
+  satisfaction     0.2717    0.1938    0.2262       129
+
+      accuracy                         0.4950       901
+     macro avg     0.2644    0.2796    0.2669       901
+  weighted avg     0.4994    0.4950    0.4933       901

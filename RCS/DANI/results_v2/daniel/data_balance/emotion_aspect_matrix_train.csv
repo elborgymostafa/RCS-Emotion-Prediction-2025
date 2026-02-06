@@ -1,0 +1,10 @@
+emotion,ambience,food,menu,miscellaneous,place,price,service,staff
+admiration,65,365,28,59,61,6,56,198
+annoyance,38,24,12,110,101,35,196,831
+disappointment,52,199,27,86,34,79,134,89
+disgust,0,27,0,0,3,0,0,0
+gratitude,0,0,0,0,0,0,0,2
+mentioned_only,36,1128,304,445,368,78,55,125
+mixed_emotions,1,4,3,1,1,0,2,0
+neutral,16,177,67,85,60,58,71,5
+satisfaction,116,386,36,168,66,66,117,134
