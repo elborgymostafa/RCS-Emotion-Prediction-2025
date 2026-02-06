@@ -1,0 +1,22 @@
+[
+  {
+    "index": 141,
+    "input": "After 2 tries by the waiter to take it away (we hadn't even looked at it yet, we had full beers yet to drink), the manager approached and told us they needed the table for people with reservations.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "neutral"
+      }
+    }
+  },
+  {
+    "index": 191,
+    "input": "Although she was obviously busy, she was helpful in describing certain items on the menu and suggested a duck dish that was out of this world.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "gratitude",
+        "pred_emotion": "admiration"
+      }
+    }
+  }
+]

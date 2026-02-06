@@ -1,0 +1,13 @@
+label,precision,recall,f1-score,support
+admiration,0.6594,0.7,0.6791,130
+annoyance,0.7322,0.8121,0.7701,165
+disappointment,0.6571,0.5055,0.5714,91
+disgust,0.0,0.0,0.0,2
+gratitude,0.0,0.0,0.0,0
+mentioned_only,0.7219,0.8602,0.785,329
+mixed_emotions,0.0,0.0,0.0,0
+neutral,0.4286,0.1525,0.225,59
+satisfaction,0.5122,0.3818,0.4375,110
+accuracy,0.6828,0.6828,0.6828,0
+macro avg,0.4124,0.3791,0.3854,886
+weighted avg,0.6608,0.6828,0.6626,886
