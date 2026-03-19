@@ -1,0 +1,39 @@
+v3 — What changed (and why macro-F1 jumped)
+	•	You collapsed the label space from 9 emotions → 5 emotions by mapping mentioned_only, gratitude, disgust, mixed_emotions into neutral (plus lowercasing/normalizing).
+	•	This removes “unlearnable” labels with near-zero support, which were previously guaranteed to get F1 ≈ 0 and drag macro-F1 down.
+	•	So the big improvement is partly real (easier, cleaner label space) and partly a metric effect (macro-F1 is now averaged over 5 learnable classes instead of 9, including dead classes).
+
+⸻
+
+v3 — Interpreting the epoch 5 results (what they mean)
+	•	Overall performance improved: accuracy 0.7168 and weighted F1 0.7170 are higher than v1/v2, meaning the model is better on the dataset as you defined it in v3.
+	•	Macro-F1 is now strong (0.6735): because all 5 classes have meaningful support and the model does non-trivial work on each. This is a good sign of balanced performance.
+	•	Neutral is now the dominant “catch-all” class: neutral support is 632, and its F1 is 0.7974—very strong. This is expected because you moved multiple labels into neutral, making it both larger and easier to learn.
+	•	Class-by-class:
+	•	admiration F1 0.6707 (solid; good recall 0.7089)
+	•	annoyance F1 0.7603 (best non-neutral; stable)
+	•	disappointment F1 0.5964 (moderate; likely confused with neutral/satisfaction)
+	•	satisfaction F1 0.5429 (harder; recall 0.5247 suggests misses into neutral/admiration)
+	•	Takeaway: v3 is a stronger, cleaner classifier, but it answers a simplified question: it no longer distinguishes fine-grained rare emotions; it treats them as neutral.
+
+⸻
+
+Why this is valid scientifically (and what to say in your report)
+	•	If your goal is robust aspect-based emotion detection with limited data, v3 is justified: rare labels don’t have enough examples to learn reliably.
+	•	But you must state clearly: this is label consolidation / redefinition, not a pure modeling improvement.
+	•	A fair phrasing is: “We re-mapped sparse and ambiguous emotion categories into a broader neutral class to reduce label sparsity and improve learnability; performance is reported for the consolidated 5-class setting.”
+
+⸻
+
+v3 — Code explanation (few bullets)
+	•	Dataframe-only preprocessing: You normalize strings and merge rare labels into neutral before LabelEncoder, so the rest of training code stays unchanged.
+	•	LabelEncoder after merge: This ensures IDs and EMOTION_NAMES align perfectly with the new 5-class label space.
+	•	Same aspect-conditioning: Input still looks like ASPECT: <aspect> | TEXT: <review> so the task stays aspect-conditioned.
+	•	Same multitask loss: Emotion loss + 0.3 × polarity loss still regularizes representation learning.
+	•	Macro-F1 now meaningful: because every class is actually present and learnable; you removed zero-support labels that would artificially zero out macro-F1.
+
+⸻
+
+One-line summary
+
+v3 gives the best and most stable metrics so far, but it achieves this by simplifying the label set (merging rare emotions into neutral), which you should explicitly document as a task-definition change.
