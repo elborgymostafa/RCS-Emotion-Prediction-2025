@@ -1,0 +1,17 @@
+DATASET BALANCE ANALYSIS SUMMARY
+================================
+
+[TRAIN SPLIT]
+- Emotion imbalance ratio (max/min): 1269.5
+- Rare emotion classes (<1%): disgust, mixed_emotions, gratitude
+- Polarity distribution: neutral=43.4%, negative=29.37%, positive=27.23%
+
+[VAL SPLIT]
+- Emotion imbalance ratio (max/min): 164.5
+- Rare emotion classes (<1%): disgust
+- Polarity distribution: neutral=43.79%, negative=29.12%, positive=27.09%
+
+[TEST SPLIT]
+- Emotion imbalance ratio (max/min): 346.0
+- Rare emotion classes (<1%): disgust, gratitude, mixed_emotions
+- Polarity distribution: neutral=43.62%, negative=29.19%, positive=27.19%

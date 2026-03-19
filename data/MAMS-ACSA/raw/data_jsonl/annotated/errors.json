@@ -1,0 +1,2448 @@
+[
+  {
+    "index": 1,
+    "input": "We were also seated promptly at the time of our reservation and the service was very quick and professional.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 2,
+    "input": "The waiters seemed annoyed we all ordered the restaurant week menu and were going to cut into their tips.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 4,
+    "input": "Service is wonderful- I've sat there for over 3 hours at dinner and never felt rushed to leave.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 5,
+    "input": "If it's atmosphere you want go to the River Cafe under the bridges and pay an arm and a leg for hospital-type food.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 7,
+    "input": "Server Sean Toussaint suggested specials and specialties worth the $$$ price.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 8,
+    "input": "small price to pay to have dinner on a Saturday night in downtown Manhattan.",
+    "errors": {
+      "place": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "admiration"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 9,
+    "input": "If you don't mind eating great thai food in a schnazzy ambience with a hop hip lunch crowd, then come on over to SPICE.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "admiration"
+      },
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 10,
+    "input": "The atmosphere is fun -- dark, pulsing, basement room; a place where you feel like you can relax.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 11,
+    "input": "If you go for lunch as we did, get there when they open as seating is fairly limited.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "mentioned_only"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 13,
+    "input": "The waitress let us taste three wines before deciding (we were only ordering glasses) and then we chose to eat at the bar (same menu) since it was so comfortable.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 14,
+    "input": "Not only is it the nicest atmosphere with an antique bar and allabaster globes sconces, marble fireplace.",
+    "errors": {
+      "place": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 15,
+    "input": "Then the menu is all in Italian well I don't speak Italian so it took forever for the waitress to translate.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mentioned_only"
+      },
+      "menu": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 16,
+    "input": "B/c the dinner focused on good friends and good food, not waiting around for service or being bothered by rude staff to leave.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 17,
+    "input": "The service was horrible- the 'manager' took my our order - did not write it down- and two of us were given the wrong appetizers and or entrees.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      },
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 18,
+    "input": "but the Server informed us that they wanted to make the soup their own and that she hopes we like it.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 19,
+    "input": "We had to wait an hour before our food was served, then another hour inbetween courses, all the while whilst the staff were naughtily hiding in an attempt to avoid our 'where's our food?'",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 21,
+    "input": "If you hate waiting for a table, then get take-out just around the corner next door.",
+    "errors": {
+      "service": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 22,
+    "input": "Nice decor - but the place is so crowded and noisy you can't enjoy it.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 24,
+    "input": "It's served cold with carmelized onions atop, with mashed potatoes on the side and it's the best darn thing this side of the Hudson.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 25,
+    "input": "Asking for the menu is out of line and unusual where the staff is actually insulted if you choose not to rely on their expertise on average Chinese food selections.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "menu": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 26,
+    "input": "we wanted to join another 2 top table to ours and the manager abruptly said, that won't work for us!",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 27,
+    "input": "Then we were led downstairs to the main room, and were seated at the huge communal dining room table.",
+    "errors": {
+      "place": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 28,
+    "input": "Bartender made a bad drink for me and I sent it back and was charged for it.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 29,
+    "input": "The Scene The bruising thoroughfare that is East 57th Street is the last place you'd expect to find an intimate, adorably decorated Northern Italian spot where it's actually possible to have a quiet, pleasant dinner.",
+    "errors": {
+      "place": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 31,
+    "input": "Our waiter had started to circle around our table like a shark after our 2nd dish, taking out plates when we were not even done.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 33,
+    "input": "Great place for either appetizers and drinks at the bar, a romantic dinner or late night partying.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 34,
+    "input": "Why would anyone ever go here when the same food (and menu) is double the price of Baba and Jaya in Chinatown.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 35,
+    "input": "They do have a large menu of things along the diner lines, and they go a little gourmet on the brunch omelette fixins/combos.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 36,
+    "input": "Though the menu is brief, entrees range from a deeply satisfying, wintry seared calf's liver with oven-dried tomatoes to a much lighter striped bass drizzled with textbook perfect beurre blanc.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 37,
+    "input": "On top of it all, I was with family from out of town and the only reason I took them there was because a friend had mentioned the place and Coffee Shop had a little wait.",
+    "errors": {
+      "service": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 38,
+    "input": "The clean, sunny interior looks nothing like Jerry and the gang's dingy haunt, but it showcases fun ephemera like Seinfeld cast autographs and press clips on how the diner inspired the musical ode by Suzanne Vega.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "admiration"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 39,
+    "input": "The Food Mafrici's approach to modern Italian fare may seem gimmicky: The menu lists eight seasonal ingredients, each prepared as an appetizer, pasta and entree.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 40,
+    "input": "atmosphere is not that relaxing, if you go - you MUST bring a cell phone and go down the street for a drink.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 42,
+    "input": "Staples are available every which way--tacos hard and soft, wrapped in tortillas stuffed with guacamole, cheese or black beans; burritos of beef, breaded catfish, pork pipian and chipotle chicken; plus a choice of four sauces from mild to just plain stupid.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 43,
+    "input": "We got there early so there wasn't much of a wait -- otherwise, I usually sit at the bar and have a cocktail.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 45,
+    "input": "our waiter from last year, a young man named Chris, actually remembered us (we did speak at length that evening about everything from food and wine to how to create good marrige).",
+    "errors": {
+      "staff": {
+        "gold_emotion": "gratitude",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 46,
+    "input": "The seafood is out of this world and priced accordingly.",
+    "errors": {
+      "price": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 47,
+    "input": "the kimchi and other sides were off, the rice had red bean mixed in, and the waitress gave us a double order of the bulgogi instead of two single orders of different meats.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 48,
+    "input": "the waitress was surly -- refused to bring sweetner for my tea!!",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 49,
+    "input": "I had one of the worst service experiences in memory having the prix fix brunch there--waving arms, calling, asking two or three times for everything from coffee to the check.",
+    "errors": {
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 50,
+    "input": "You'll have to wait for a long time if you're not in with the management or Fernando, but it's worth it, have some campari and cinzano at the bar!",
+    "errors": {
+      "staff": {
+        "gold_emotion": "gratitude",
+        "pred_emotion": "mentioned_only"
+      },
+      "menu": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      },
+      "service": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 51,
+    "input": "AND, the waitstaff likes to lick its fingers when cutting cakes/pies and serves hot and cold drinks by holding the glass or cup around the brim/top.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disgust"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disgust"
+      }
+    }
+  },
+  {
+    "index": 52,
+    "input": "This place is even good for just drinks after work (nice bar) I am going back there as soon as I get a chance.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 53,
+    "input": "Also lovely was the atmosphere; the high ceilings and spacious room make it a nice contrast from the other brunch mills on the upper west side.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 54,
+    "input": "We were crammed next to the people who were seated to the right of us, who repeatedly took phone calls during dinner, while the rude wait staff did nothing despite the warning on the menu that cell phones were not to be used in the dining room.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 55,
+    "input": "The host was aloof; my waitress, though sweet, didn't seem to know the food or the menu very well; and the waiter we flagged over to order our wine seemed as if he had never looked at the wine list before.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      },
+      "food": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 57,
+    "input": "I politely asked the waitress to explain these charges noting that the menu was misleading and she got frustrated mad and then told her manager.",
+    "errors": {
+      "price": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 58,
+    "input": "Our waiter was pushing us all night to take our plates, and swiped my dessert before I was finised with it.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 59,
+    "input": "Not ony did our waiter impose on the dessert we were trying to enjoy to take the money -- he didn't even ask us if we wanted change -- nor did he bring us back any!!!",
+    "errors": {
+      "price": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 60,
+    "input": "For appetizers, wine, dinner, desert, great convesation, expect to spend a couple of hours.",
+    "errors": {
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 61,
+    "input": "Ten minutes later: no burgers and no sign of our waiter.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 63,
+    "input": "Service was bad enough that we decided to head out after the first round of drinks.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      },
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 64,
+    "input": "When the bill came, the waiter snatched it back so he could add the $3 difference to the wine.",
+    "errors": {
+      "price": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mentioned_only"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 66,
+    "input": "I was NOT told this before when I made the reservation and explained to the manager RICHARD who has the poorest customer service ever and rude and said he didn't believe me.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 68,
+    "input": "The Setting The exposed brick and tangerine walls, flickering candles and tiny bar cast a formal mood across this cozy Park Slope trattoria, but the high ceiling fans and two glass walls (left open in warm weather) add a casual breeziness.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 69,
+    "input": "The Food The menu includes lovingly made renditions of panini, bruschetta and tramezzini (cocktail-style sandwiches with fillings like tuna with black olive pesto and bresaola with arugula), along with a roster of cured meats, cheeses and olives that have been imported from Italy.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 70,
+    "input": "Our waitress was rather un-friendly, seemed annoyed that we didn't want appetizers and we waited 15 minutes before our wine arrived.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 71,
+    "input": "To complain about waiting for a table, etc.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 73,
+    "input": "Finally got our food after waiting a long time for oysters, doesn't take that long to shuck 'em, the place isn't that big, and it was OK.",
+    "errors": {
+      "food": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 75,
+    "input": "Got a seat quick, and had some weird fill-out order form for a hard to understand menu.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      },
+      "menu": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 76,
+    "input": "The lunch specials are reasonably priced, but I avoid this place when I can only order off the regular menu.",
+    "errors": {
+      "price": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "satisfaction"
+      },
+      "menu": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 77,
+    "input": "then the manager gave us lemon juice instead of ceasar dressing for a ceasar salad which ruined the salad.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 78,
+    "input": "The price wouldnt be so bad if it wasnt for the poor service, average food, and uninspired menu selections (choice of tiramisu and strawberries with whipped cream for dessert?!",
+    "errors": {
+      "price": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mixed_emotions"
+      },
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 80,
+    "input": "The waiters actually roll their eyes when you order something, as if you are imposing on them by ordering food.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 81,
+    "input": "Recommend eating at the bar for an intimate, relaxed dinner.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 82,
+    "input": "We had to request water and chips (tostades) and salsa three times (the third time my date had to go and track down the waitress) before finally being served (by the busser) and the place wasn't even a quarter full.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 84,
+    "input": "this has become one of my favorite spots to hang out at the bar and drink martinis, not only because the atmosphere is energetic and lively, but also becasue the staff are so friendly.",
+    "errors": {
+      "food": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 86,
+    "input": "The food is decent, but for what the bill comes to, it's just not worth it.",
+    "errors": {
+      "price": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 88,
+    "input": "The waitress was no where to be found at all throughout the course of the meal, did not refill a single drink nor did she bother to inquire about my satisfaction with the food or even bring the check at the conclusion of the meal.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 90,
+    "input": "Food and Service of the same high quality elsewhere in NY would have been twice the cost.",
+    "errors": {
+      "price": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 91,
+    "input": "The kitchen is fast, but you sometime may have trouble getting a seat, since this place is very small.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mixed_emotions"
+      }
+    }
+  },
+  {
+    "index": 92,
+    "input": "I have been a waiter for many years and I can tell you that if bad service is given you at least apologize to the costumer.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 93,
+    "input": "For Manhattanites like us that are used to pretentious attitudes and expensive tabs, this place is definitely a nice change from the rest of the meatpacking district.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      },
+      "ambience": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 95,
+    "input": "The four of us were seated in the outdoors patio(not requested) and suffered through a muddled menu, indifferent food, a below average waiter, as well as excessive noise, wind and cold.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "ambience": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 96,
+    "input": "We went there on New Year's Day around 7 pm without a reservation and were able to get a table right away thanks to the very accomodating hostess.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "gratitude"
+      }
+    }
+  },
+  {
+    "index": 97,
+    "input": "At least you have the ambiance and lovely live piano musice being played for you while you wait.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      },
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 98,
+    "input": "Like the other Bromberg Brothers establishments, expect the customer is always wrong attitude from the staff along with overpriced wines you never heard of, no bar, tiny waiting area and lousy desserts.",
+    "errors": {
+      "price": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "disgust",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 99,
+    "input": "When we showed up, the guy at the door said it would be 15 minutes and that we could wait by the bar.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 101,
+    "input": "We sat near the sluggish, hot and very loud kitchen and the service area was not wiped down once during the entire time.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 102,
+    "input": "Huge selection of farm roasted coffee served with a smile, absolutely no attitude, and accompanied with the best pastries in Manhattan.",
+    "errors": {
+      "service": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 106,
+    "input": "I'm not going to trash the place simply because I had a bad experience there, but here's the facts: the food is very good, the portions are small-to-medium, and the prices are large.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 107,
+    "input": "The atmosphere would have been almost perfect if it werent for the fact that we were seat right naext to the noisy kitchen but I guess the speedy service comes with a price.",
+    "errors": {
+      "service": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 108,
+    "input": "They brought my mother a chicken enchiladas instead of cheese and then it took her 10 minutes to explain what the error was to the waiter and bus boy who then finally had to tell the manager who was also confused and my mother is fluent in Spanish.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 111,
+    "input": "The tasting menu was delivered at a break-neck pace, leaving no time to enjoy the wine or even digest the food.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 114,
+    "input": "The server spilled beer on the table when he poured it; he dropped ice cubes for another one of our guests and water everywhere else.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 115,
+    "input": "On the menu board posted outside - they got Passion Fruit Creme Brule.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 116,
+    "input": "This is definitely not a place to come for lunch because you can get the same food from a corner deli at half the price they charge here.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 117,
+    "input": "The service always ruins your food if it's poor.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      },
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 118,
+    "input": "Once seated, there was no waitress to give us our menus.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      },
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 119,
+    "input": "However, after speaking with the manager on the phone for about 15 minutes, the waitress said they couldn't give us any discount but would gladly give us a free pitcher of sangria.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "satisfaction"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 120,
+    "input": "Space gets kind of crowded in there--because it's so popular--but it's worth the wait because the food is very good.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 121,
+    "input": "In addition guys, please hire some waitstaff who know both English and your menu.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 126,
+    "input": "One hour into our dinner, we were told by the hostess that we needed to hurry up and finish so that they could accommodate the next party's reservation.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "annoyance"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 127,
+    "input": "But other comfort foods are also superb: Scallion pancakes are delectably crispy yet chewy, and chow fun with shredded pork and preserved cabbage (it's not on the menu) offers a tangy rice-noodles retake on the usual lo mein.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 129,
+    "input": "When spending upwards of $200 for dinner for two, I expect better service.",
+    "errors": {
+      "price": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 130,
+    "input": "Although the place had an actual makeover not long ago, the food or chef needs to be changed.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 131,
+    "input": "The wait staff didn't bother to refill my water until I had finish mine and was almost done with my husband's glass too.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 132,
+    "input": "The Food Consulting Chef Douglas Rodriguez's forte is blending the diversity of traditional Latin cuisine with modern culinary chic: A celery sorbet cools the spicy-citrus bite of lobster; shrimp seviche and crunchy green plantains coat thick, juicy halibut resting on sweet plantain hash; and tart tomato escabeche moistens a chewy skirt steak.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "admiration"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 133,
+    "input": "The scene was sassy and cool, but i would never eat dinner here again.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 134,
+    "input": "Don't know if the bar is really that bad, BUT the food would more than compensate!",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 135,
+    "input": "Much has been made of Island's lack of french fries--space and cost are cited on the menu--but an order of thick crispy salt and vinegar chips almost satisfies the craving.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 137,
+    "input": "It took an hour for us to order, another hour and 15 min to get our entree's I had to go to the bar to order my champange, and carry it back myself, the waiter got our entrees mixed up and placed them in the wrong place and sat there and watched me switch them around.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 138,
+    "input": "The Food The Korean dishes here are a bit more delicate than the potent fare found 30 blocks north, but the kitchen is hardly pulling its punches.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 139,
+    "input": "The decor is sparse and elegant, the service warm (though my waitress was occasionally difficult to find), and the sushi fresh.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mixed_emotions"
+      },
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 140,
+    "input": "It is a nice room with a cool bar and you should stop in for a drink and Tapas but dinner was very weak!!!!",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      },
+      "food": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 141,
+    "input": "After 2 tries by the waiter to take it away (we hadn't even looked at it yet, we had full beers yet to drink), the manager approached and told us they needed the table for people with reservations.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 142,
+    "input": "If you're tired of the long waits for table at nearby place, then head to Moutarde for a delicious meal that won't keep you waiting.",
+    "errors": {
+      "place": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "satisfaction"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 143,
+    "input": "Our waiter was a real pro; knew a lot about ingredients and allowed us to take our time.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "gratitude",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 144,
+    "input": "In the winter they have the fireplaces working which immediately creates a cozy romantic feel.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "admiration"
+      },
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 146,
+    "input": "Anyway the food was really good, the portions are not big however very filling and exceptionally good.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 147,
+    "input": "Not the best ambiance, but meat that'll make you drool.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 148,
+    "input": "The menu is limited: chicken, rice beans, frozen fish (shrimp, whiting, crab sticks), and french fries, but one receives EXCELLENT value for the money and it is SO WORTH walking down the block for.",
+    "errors": {
+      "price": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      },
+      "place": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 149,
+    "input": "Despite him not being my designated server, he basically took over for our inexperienced waiter the rest of the dinner.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "admiration"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 151,
+    "input": "The atmosphere is nice, food is really worth it, especially for such prices, but service sucks:  I first ordered 2 different martinis and never got the one I asked for;  they brought the wrong dishes -although it was quick!- and then we had to ask for chopsticks to be able to eat our dishes.",
+    "errors": {
+      "price": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      },
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 152,
+    "input": "I asked the waiter about the vintages of the wines, to which he replied, I don't know, probably 2003/2004.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 154,
+    "input": "Never heard anything about a minimum required food order of $30 or had any bad experiences with the staff.",
+    "errors": {
+      "price": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 156,
+    "input": "We started with some drinks on the front porch and then continued at our table with a bottle of delicious red wine.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 157,
+    "input": "After ordering a couple beers from the pleasant bartender, my date and I took a seat at one of MANY vacant tables next to the bar (The bar stools were full).",
+    "errors": {
+      "place": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 160,
+    "input": "After some good food and spotty service, my friends and I were surprised to get a bill that had a 20% tip included post-tax.",
+    "errors": {
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 161,
+    "input": "Service was unbelievably on target down to the smallest detail; our waiter invited us to sample a new desert under consideration for their menu and a new line of ice wines.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 162,
+    "input": "The service was polite, friendly and prompt, the characters walking around entertained the kids but werent intrusive to our meal.",
+    "errors": {
+      "service": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 163,
+    "input": "When we requested a table our bar tab was quickly transferred and the LOVELY hostess sat us at a table of our choice - we chose the corner.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "gratitude",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 164,
+    "input": "Even with reservation, it might take up to one hour to get a table and the staff might not even say a word about it.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 165,
+    "input": "The hostess was inefficiently seating people and disappeared for minutes at a time, letting the line grow to 15+ people waiting to put their names on the list.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 167,
+    "input": "They were out of cherry, so we got a few slices of apple and one key lime.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 168,
+    "input": "We made a reservation for 5:30pm (20 people) and people were still arriving at 5:45 (over half the group was there) when the manager came over and literally yelled at us for not being on time saying it was a busy time for him, when in fact there were several empty tables throughout the restaurant.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 172,
+    "input": "The menu alternates between typical American fare (salads, potato skins, Angus burgers and grilled chicken) and modestly international cuisine like fajitas, wraps and pot stickers.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 173,
+    "input": "If you're dining solo, you will feel completely at ease in the cozy environs; in fact, you're likely to see at least one other solo diner hunched over a book, sipping a glass of Chianti.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 174,
+    "input": "When I read some of the reviews in this section, I am not sure if they had diner in the same restaurant and also I would not be suprise if they decided to have their Branzino well done with butter on the side.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 176,
+    "input": "When the manager was asked for things did imporve but 2 hours to get our meal.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "gratitude"
+      },
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 177,
+    "input": "The scene is a bit much some time, but the food is worth it.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 178,
+    "input": "The staff didn't even tell us (college kids) about the prix-fixe special, but the pair of older adults sitting next to us took advantage.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 183,
+    "input": "When the group arrived for the Noon lunch the restaurant was only partially set up and the group was forced to eat lunch while the staff noisily set up the restaurant around them.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 185,
+    "input": "After being seated outside by the host, a waitress came over and yelled at us for taking a table that belonged to people waiting at the bar.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 186,
+    "input": "While the place looks rather small and undecorated, I will definitely go back just for the food.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 188,
+    "input": "A bustling crew of sage green-shirted servers whisk plates of luncheon and light dinner favorites to power lunchers, tourists, and ladies who lunch.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 191,
+    "input": "Although she was obviously busy, she was helpful in describing certain items on the menu and suggested a duck dish that was out of this world.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "gratitude",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 193,
+    "input": "The menu of upscale American fare is somewhat intimidating as there are almost too many choices, but our wonderful waiter Eric came to the rescue suggesting and describing specials as if he had just polished off dinner himself.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 194,
+    "input": "5 minutes later the same waitress came back to have us move to the next table so she could seat a party of 4.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 195,
+    "input": "Before leaving the server gave us takeout menus.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 196,
+    "input": "The food is just ok, not at all worth having to put up with the disgusting staff, the manager/owner in particular.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "disgust"
+      }
+    }
+  },
+  {
+    "index": 197,
+    "input": "While the people here were nice and the service was very good, the food was not very good - it was extremely greasy, the place did not offer alternatives such as egg whites and PAM spray instead of oil, coffee was average Crystal Rock Office Flavored Coffee - not the good coffee.",
+    "errors": {
+      "food": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disgust"
+      },
+      "staff": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 198,
+    "input": "As well, I haven't eaten animal products in over 6 years and the waiter was not sure which dishes had honey or casien in the food.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 199,
+    "input": "The bar was so crowded there was no point in ordering a drink, and when we were finally seated we got no service at all for 20 minutes.",
+    "errors": {
+      "place": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 201,
+    "input": "We were directed to a table by a member of staff, which we were then informed was reserved, and lost our seats at the bar, all this after spending upwards of $30 each on very expensive drinks over a two-hour period.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 202,
+    "input": "The best thing though was when they messed up the fish order they not only gave us each a free glass of wine, but they took that fish order off our bill!!!",
+    "errors": {
+      "staff": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "gratitude"
+      }
+    }
+  },
+  {
+    "index": 203,
+    "input": "The food is decent at best, and the ambience, well, it's a matter of opinion, some may consider it to be a sweet thing, I thought it was just annoying.",
+    "errors": {
+      "food": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 205,
+    "input": "It was somewhere between our waiter not knowing what sushi came as part of the tasting platter and the copious amounts of wine that he spilt while trying to pour me a taste that I realized.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 206,
+    "input": "The food is average, however the service is way below average (our waiter was a stuttering fool when it came to the specials and left our drinks empty for the majority of the night) The atmostphere is cheesy as well as the crowd.",
+    "errors": {
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 208,
+    "input": "When we went, the wait staff did not talk to us about any of the specials/the menu etc and handed us our bill while we were still eating.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 210,
+    "input": "The last two didn't come to the people who ordered them until they already had there food ( in which then we had to remind the staff of).",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 211,
+    "input": "Food is decent but portions so small that after 5 appetizers, 2 sides and three entrees, the three of us left still hungry!",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 212,
+    "input": "When we got our food, the waitress barely said a word as she placed our take-out on the table and grabbed the check.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 213,
+    "input": "To enhance the dining experience, there is a live jazz band, which further isolates you from the world outside the gates.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 214,
+    "input": "If coming to Tea and Anthipathy (yea u heard me) during conventional dining hours, expect a good long wait on the curb till tables open up.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 215,
+    "input": "I went back to telly's because i heard that they changed the Chef and the food was again, after a very very small break, was excellent again.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 217,
+    "input": "The Wasa Waffle was different but when we spoke to the manager he inmediatly changed if for another dish (He suggested the Chocolate decadence French Toast.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 221,
+    "input": "Despite talking to the weekday manager on the prior Monday, who gave me a hard time but agreed to make a reservation for me since my group was so big.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 222,
+    "input": "While we were trying to have dinner, all of the waiters spent their time playing with spilled milk at the counter, not paying any attention to the diners.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 223,
+    "input": "Alongside the USDA prime dry-cut steaks, the menu features standard steakhouse fare: appetizers like shrimp cocktail, fresh oysters and clams, an array of salads, soups, pastas and vegetable sides, and non-steak entrees like lamb, veal and pork chops, lobster and more.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 224,
+    "input": "For the high price you would pay (dinner for the two could run $80), you sure do get alot.",
+    "errors": {
+      "price": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 225,
+    "input": "The entree menu is not diverse, but the items on it are all very good.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 226,
+    "input": "The basil pepper mojito was a little daunting in concept, but I was refreshed at the flavor.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 228,
+    "input": "In all cases, service is slow but it's not the waiters fault.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 229,
+    "input": "We a menu that rearely changes,except for one or two specials, the quality and care they put in thier food in evident.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      },
+      "service": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 230,
+    "input": "some old drunk guy who claims he is an American born in France seems to be a regular at the bar, he sat down next to us, listened to our whole conversation then started aggressing us verbally, and the waiter took the longest time to intervene.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "disgust",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 231,
+    "input": "Our waiter, even though he was serving dinner, was SO out to lunch.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 234,
+    "input": "I went to Joy hoping to find some great Indian, but unfotunately found curry that was no better than average.",
+    "errors": {
+      "food": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 235,
+    "input": "Ziti Bolognese is baked in a similar sauce, with ground meat mixed in and cheese melted on top--the menu offers many variations on this theme.",
+    "errors": {
+      "menu": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 236,
+    "input": "Kids love the tabletop crayons and coloring books, but the real crowd-pleaser is raw pizza dough--lumps are available at the open kitchen window.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 237,
+    "input": "I'd say the menu is generally below-average for the neighborhood, but if you want a burger, this is the place to go.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 241,
+    "input": "why go there to deal with staffs' attitude and eat bad food?",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 244,
+    "input": "Usually you lose food quality the trendier you go, but not at this place.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 246,
+    "input": "The mussels and frits were great, but the host had an attitude and my friends and I waited about 1 1/2 hours to be seated on a random Tues.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 247,
+    "input": "The Scene Service bustles through the energetic, sprawling space with the precision of expert merengue dancers, and everyone else goes along with the flow suggested by the tall, curving ceilings.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 248,
+    "input": "When after 2 hours we did ask for our entrees, the waiter and busboy were both extremely rude.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 250,
+    "input": "We were a bit chatty so it took us a while to decide what to order, but when we made it abundantly clear we were ready (closed the menu, looked around for our waiter) he was slammed from the recent filling of the space.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mentioned_only"
+      },
+      "menu": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 251,
+    "input": "The place is small, the host was friendly and communicative -- we had to wait 45 minutes for a table but they don't take reservations and clearly it's a popular spot.",
+    "errors": {
+      "place": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 253,
+    "input": "Our waitress couldn't tell us what was in the seafood special, forgot to put in our oyster order so it came at the same time as the main meals, wasn't able to provide a confident recommendation from the menu, and had to be flagged several times for drinks.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 254,
+    "input": "The menu had more selections, price points that fit all our budgets and a new Sushi menu that went over huge with the table.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 259,
+    "input": "When the waitress brought the check after an hour, she finally noticed that I had been sitting without food and offered to get it for me.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "gratitude"
+      },
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 261,
+    "input": "To be honest, it cost $95 for two adults and a kid (including only two beers for the adults), and the only things worth eating were the raw oysters, information about which the staff was not too sure.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "disgust",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 262,
+    "input": "So, if you don't care about speedy service, go; but if you aren't in the habit of lighting your cigarette with twenties, avoid the tapas.",
+    "errors": {
+      "price": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 263,
+    "input": "However for the price I paid to have dinner there, you would have thought I ate a horse.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disgust"
+      }
+    }
+  },
+  {
+    "index": 264,
+    "input": "Our waitress was a bit cold but she was still attentive and food came quickly.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mixed_emotions"
+      }
+    }
+  },
+  {
+    "index": 265,
+    "input": "Then the staff behind the buffett just haven't gotten their groove yet, so you order your food and wait five minutes while it sits behind the glass on a plate, getting cold.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 267,
+    "input": "The dessert was as good as the waiter said it would be.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "mentioned_only",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 268,
+    "input": "The waitress, host, and bus staff were sitting around at the bar while the patrons were all complaining about the service.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 269,
+    "input": "After having the table cleared and recieving fresh warm plates, we shared the Chicken Tikka Masala and the Chicken and Lentils.",
+    "errors": {
+      "food": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      },
+      "service": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 270,
+    "input": "Upon explaining, the waiter confronted us as we left and spewed a stream of profanities at us as we walked out the door.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 271,
+    "input": "After a couple of drinks upstairs before our meal, we slipped downstairs to a nice corner table that offered plenty of privacy in this 'loud' place.",
+    "errors": {
+      "place": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 272,
+    "input": "True, the service is hardly on par with the finer restaurants in NYC, but I go for the energy and the tasty tapas-like seafood treats that are perfect with beer or sake.",
+    "errors": {
+      "ambience": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 273,
+    "input": "The busboy kept our glasses full; the waiter warmed up to our table at the end of the night by cracking jokes.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "gratitude",
+        "pred_emotion": "satisfaction"
+      },
+      "service": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 275,
+    "input": "A narrow corridor leads to a tiny space where there are three tiny white tiled counters, a great deal of mess (stacks of bottles, cans) and a small counter holding 12-14 entrees.",
+    "errors": {
+      "place": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 276,
+    "input": "I got the Paella Marinera which was beyond filling in itself, but before it even came, the waitstaff provided more than ample appetizers for my group that by the time that the meal came to us, we were so stuffed, we could barely finish up the meal.",
+    "errors": {
+      "food": {
+        "gold_emotion": "mixed_emotions",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 277,
+    "input": "Pastas include shellfish-stocked linguine with tomato sauce, and an excellent homemade cheese ravioli--all are available in half portions.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 278,
+    "input": "The Scene  With flickering sconces and rough-hewn brick walls, Crispo may look like an elegantly restored Italian farmhouse, but frenzied servers, tight tables and wait-list hopefuls at the marble bar make it feel like a city-slick hotspot.",
+    "errors": {
+      "place": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "admiration"
+      },
+      "staff": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "annoyance"
+      },
+      "ambience": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "mixed_emotions"
+      }
+    }
+  },
+  {
+    "index": 281,
+    "input": "The waiter was pretty anxious to get us in-and-out, although there were ample tables and my friend and I opted to sit at the bar.",
+    "errors": {
+      "place": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 282,
+    "input": "The waiter didn't know the menu, didn't bring more than one item at a time, and put some orders in twice with the kitchen.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "menu": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 283,
+    "input": "The band is positioned in front of the windows, in a space roughly the size of a living room.",
+    "errors": {
+      "place": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 284,
+    "input": "The owners couldn't have been more accomodating -- we had the entire restaurant to ourselves on a Saturday (before it opens to the public for dinner).",
+    "errors": {
+      "place": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 285,
+    "input": "I definitely liked the vibe in the restaurant - the food is good with enough variety to please everyone - I'd say the portions were quite skimpy where it counts - meat whether fish or steak - and for those prices this is very irksome.",
+    "errors": {
+      "price": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      },
+      "ambience": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      },
+      "food": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 286,
+    "input": "The food was delicious, and the menu provided ample choices which suited all of the eaters in our party from the most daring to the most conservative.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 287,
+    "input": "After 10 minutes of waiting, he finally returned to the table and snootily explained to us that the wine he had opened was actually better and more expensive (not yet on the menu, of course), but he would charge us the price of the bottle we had originally ordered.",
+    "errors": {
+      "price": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "admiration"
+      },
+      "menu": {
+        "gold_emotion": "no_emotion",
+        "pred_emotion": "mentioned_only"
+      }
+    }
+  },
+  {
+    "index": 288,
+    "input": "The chef will not alter any of the three tasting menus.",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "no_emotion"
+      },
+      "menu": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "no_emotion"
+      }
+    }
+  },
+  {
+    "index": 289,
+    "input": "The food was great so that made up for the lack of service from the waitress.",
+    "errors": {
+      "service": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 291,
+    "input": "After the wonderful anipasto tray came, it was 60 minutes before our plates were removed and dinner was brought.",
+    "errors": {
+      "service": {
+        "gold_emotion": "disappointment",
+        "pred_emotion": "annoyance"
+      }
+    }
+  },
+  {
+    "index": 292,
+    "input": "Fresh fish, tender milk fed veal and outrageous Veal Chops adorn their menu and special list.",
+    "errors": {
+      "miscellaneous": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "no_emotion"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 294,
+    "input": "The food was great but the music was loud and hip-hop and the wait was ridiculous and the prices were out of this world.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 295,
+    "input": "the soups were superb and only $2 a bowl, and the entire dinner, with beers, cost less than $30 for two people.",
+    "errors": {
+      "price": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      },
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  },
+  {
+    "index": 296,
+    "input": "My only two complaints are that (1) our server was a real space cadet and kinda inattentive and (2) the sodas were really small; overall, though, I had a great time and really enjoyed my dinner!",
+    "errors": {
+      "staff": {
+        "gold_emotion": "annoyance",
+        "pred_emotion": "disappointment"
+      }
+    }
+  },
+  {
+    "index": 297,
+    "input": "Thankfully, a succinct menu leaves little to ponder--and, despite the high churn, burgers always arrive as specified.",
+    "errors": {
+      "food": {
+        "gold_emotion": "admiration",
+        "pred_emotion": "satisfaction"
+      }
+    }
+  },
+  {
+    "index": 298,
+    "input": "Best Baked Ziti in the area, great classic NY pizza.",
+    "errors": {
+      "food": {
+        "gold_emotion": "satisfaction",
+        "pred_emotion": "admiration"
+      }
+    }
+  }
+]

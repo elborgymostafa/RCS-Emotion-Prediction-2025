@@ -1,0 +1,4 @@
+TEST metrics
+macro_f1    = 0.4024
+weighted_f1 = 0.6900
+micro_f1    = 0.6937

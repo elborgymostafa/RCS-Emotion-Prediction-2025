@@ -1,0 +1,44 @@
+Aspect Macro F1,Aspect Micro F1,Aspect Accuracy,Polarity Macro F1,Polarity Micro F1,Polarity Accuracy,Emotion Macro F1,Emotion Micro F1,Emotion Accuracy,Aspect Report,Polarity Report,Emotion Report
+0.9939359994025615,0.9926062846580407,0.9926062846580407,0.7446786546997411,0.9926062846580407,0.9926062846580407,0.9002223270244115,0.9574861367837338,0.9574861367837338,"aspect          precision    recall  f1-score   support
+               precision    recall  f1-score   support
+
+     ambience       1.00      1.00      1.00        50
+         food       0.99      0.99      0.99       158
+         menu       0.98      0.98      0.98        50
+miscellaneous       1.00      1.00      1.00        26
+        place       1.00      1.00      1.00        27
+        price       1.00      1.00      1.00        42
+      service       0.99      0.99      0.99        75
+        staff       0.99      0.99      0.99       113
+
+     accuracy                           0.99       541
+    macro avg       0.99      0.99      0.99       541
+ weighted avg       0.99      0.99      0.99       541
+","polarity        precision    recall  f1-score   support
+                precision    recall  f1-score   support
+
+mentioned_only       0.00      0.00      0.00         0
+      negative       1.00      1.00      1.00       208
+       neutral       0.99      0.98      0.99       150
+      positive       0.99      0.99      0.99       183
+
+      accuracy                           0.99       541
+     macro avg       0.75      0.74      0.74       541
+  weighted avg       0.99      0.99      0.99       541
+","emotion         precision    recall  f1-score   support
+                precision    recall  f1-score   support
+
+    admiration       0.94      0.95      0.95       108
+     annoyance       0.97      1.00      0.98        87
+disappointment       1.00      0.97      0.99       118
+       disgust       0.80      1.00      0.89         4
+     gratitude       1.00      0.33      0.50         6
+mentioned_only       0.92      0.99      0.96        98
+mixed_emotions       1.00      1.00      1.00        10
+       neutral       0.97      0.80      0.88        44
+  satisfaction       0.94      0.98      0.96        66
+
+      accuracy                           0.96       541
+     macro avg       0.95      0.89      0.90       541
+  weighted avg       0.96      0.96      0.96       541
+"
