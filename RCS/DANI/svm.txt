@@ -1,0 +1,40 @@
+V5 Linear SVM — what the results mean (VAL + TEST)
+	•	SVM beats Logistic Regression, but it’s still far behind the transformer.
+	•	VAL: accuracy 0.558 (vs LogReg 0.495), macro-F1 0.291 (vs 0.267)
+	•	TEST: accuracy 0.556 (vs LogReg 0.509), macro-F1 0.291 (vs 0.275)
+So SVM is a stronger classical baseline, but it still can’t capture deep context like DistilRoBERTa (v2) or the simplified-label v3.
+	•	It’s especially good at “mentioned_only” and “annoyance”.
+	•	mentioned_only F1: 0.738 (VAL), 0.712 (TEST) with high recall (~0.80).
+	•	annoyance F1: 0.665 (VAL), 0.708 (TEST) with high recall (~0.72–0.79).
+These are emotions that often correlate with obvious lexical patterns (complaint words, negation, intensifiers, “just mentioned”).
+	•	Moderate improvements on disappointment vs LogReg; mixed on admiration.
+	•	disappointment F1 improves a lot on TEST (0.386 vs LogReg 0.364) and on VAL (0.315 vs 0.292).
+	•	admiration is inconsistent: VAL F1 0.364 (better than LogReg 0.311), but TEST F1 0.337 (roughly similar to LogReg 0.312).
+	•	Neutral and satisfaction are still weak / confusing.
+	•	Neutral: VAL F1 0.314, TEST 0.193 (drops on test).
+	•	Satisfaction: VAL F1 0.221, TEST 0.286 (improves on test but still low).
+This is the classical “bag-of-words” limitation: neutral and mild satisfaction often share vocabulary with other classes, and subtle cues depend on context/structure.
+	•	Rare labels remain “dead” (expected).
+Disgust / gratitude / mixed_emotions have 0–3 examples → SVM can’t learn them, so F1 stays 0 and drags macro-F1 down.
+
+⸻
+
+Why SVM > LogReg here (intuition)
+	•	Linear SVM optimizes a margin (separation boundary) which often works very well with high-dimensional sparse TF-IDF features.
+	•	Logistic Regression outputs calibrated probabilities, but in sparse text settings SVM frequently has an edge for pure classification accuracy.
+	•	Both still share the same core limitation: no deep contextual semantics, only surface word/phrase patterns.
+
+⸻
+
+What to write in your report (short, usable wording)
+	•	“Among classical baselines, LinearSVC with TF-IDF outperformed Logistic Regression on both validation and test splits (≈0.56 vs ≈0.50 accuracy). Performance gains were concentrated in frequent, lexically marked classes (annoyance, mentioned_only), while rare emotions (disgust, gratitude, mixed_emotions) remained unlearnable due to minimal support. Overall, the classical models underperformed transformer fine-tuning, consistent with the need for contextual representations in aspect-conditioned emotion classification.”
+
+⸻
+
+Quick comparison snapshot (so you can position v5)
+	•	v2 DistilRoBERTa (9-class): ~0.69 acc, macro-F1 ~0.40–0.46
+	•	v3 DistilRoBERTa (merged to 5-class): ~0.72 acc, macro-F1 ~0.67
+	•	v5 SVM (9-class): ~0.56 acc, macro-F1 ~0.29
+	•	v4 LogReg (9-class): ~0.50 acc, macro-F1 ~0.27
+
+If you paste your v5 confusion matrix (just the top confusions), I can tell you exactly which class pairs SVM confuses most (usually neutral↔satisfaction and admiration↔satisfaction/disappointment).

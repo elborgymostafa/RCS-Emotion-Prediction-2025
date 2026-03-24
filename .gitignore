@@ -7,6 +7,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+paper.zip
+paper/
 .Python
 build/
 develop-eggs/

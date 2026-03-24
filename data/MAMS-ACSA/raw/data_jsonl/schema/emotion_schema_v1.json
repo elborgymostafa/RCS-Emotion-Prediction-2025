@@ -4,7 +4,7 @@
     "negative": ["Annoyance", "Disappointment", "Disapproval", "Confusion", "Fear"],
     "neutral": ["Indifferent"]
   },
-  "food": {
+  "food": { 
     "positive": ["Joy", "Admiration", "Impressed", "Satisfaction"],
     "negative": ["Disgust", "Disappointment", "Annoyance", "Confusion", "Remorse"],
     "neutral": ["Indifferent"]

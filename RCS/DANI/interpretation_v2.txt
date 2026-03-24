@@ -1,0 +1,32 @@
+v2 — Interpretation (Epoch 5 vs Epoch 6)
+	•	Overall performance improved slightly: Accuracy goes from 0.6896 → 0.6926, and weighted F1 from 0.6849 → 0.6887. That’s a small but real gain, meaning the model is getting a bit better on the dominant classes.
+	•	Macro-F1 jumps a lot (0.4029 → 0.4551), but it’s “fragile”: This looks like improvement on minority classes, but your supports changed (886 → 901), and the rare classes are extremely tiny, so macro-F1 can swing a lot from a few examples.
+	•	Big win at epoch 6: “satisfaction” improves strongly: F1 goes 0.50 → 0.5993, with recall 0.5727 → 0.6434. This is meaningful because satisfaction has decent support (110/129), so it’s not just noise.
+	•	Some regression in “admiration” and “neutral”: Admiration F1 drops 0.6562 → 0.6083, and neutral stays weak (0.2826 → 0.2439). This suggests the model is still confusing subtle/ambiguous emotions.
+	•	Rare labels remain unreliable: disgust/gratitude/mixed_emotions have supports like 0–3. A single correct/incorrect prediction massively changes precision/recall (e.g., disgust precision becomes 1.0 with only 3 samples). So don’t over-interpret those.
+
+⸻
+
+Why v2 Looks Better Than v1 (What changed conceptually)
+	•	Proper train/val/test split: You now train on train.jsonl, validate on val.jsonl, and report final performance on test.jsonl, which makes results more trustworthy than random splitting by unique text inside one file.
+	•	LabelEncoder is fit only on train: This prevents label leakage and forces consistent ID mapping across splits.
+	•	EMOTION_NAMES consistent with LabelEncoder IDs: Your report now matches the exact class index ordering used in training (no silent mismatch).
+	•	Metrics use labels=range(num_classes): This prevents sklearn errors and ensures every class is accounted for consistently.
+	•	Trainer evaluates only emotion logits: Multi-task training stays, but evaluation is cleanly emotion-focused.
+
+⸻
+
+What the numbers mean in practice (5 bullets)
+	•	“mentioned_only” + “annoyance” are your anchors: High F1 (~0.81 and ~0.76–0.80) shows the model reliably detects these frequent/clear patterns.
+	•	Mid-frequency emotions are decent but not stable: admiration and disappointment hover around ~0.57–0.66 F1, meaning the model gets them “often right” but still confuses them with neighbors.
+	•	Neutral is the hardest: Low recall (~0.21–0.22) means it rarely predicts neutral when it should; neutrality is often expressed implicitly and overlaps with mild satisfaction/disappointment.
+	•	Epoch 6 is preferable overall: Better accuracy, weighted F1, and especially a strong improvement in satisfaction.
+	•	Minority emotions need data, not tuning: For emotions with support near 0–3, the model cannot learn a stable decision boundary.
+
+⸻
+
+If you must pick one checkpoint
+
+Pick epoch 6 (better overall, especially satisfaction + overall F1), but report macro-F1 with a caution that rare labels are too small for reliable conclusions.
+
+If you want, paste the confusion matrix for epoch 6 and I’ll tell you exactly which emotion pairs are being confused most (that’s usually the fastest path to improvement).

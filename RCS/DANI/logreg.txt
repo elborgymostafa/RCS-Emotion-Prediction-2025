@@ -1,0 +1,35 @@
+Logistic Regression baseline — what the results mean (VAL + TEST)
+	•	Overall it’s much weaker than the transformer models. Accuracy is ~0.50 (VAL 0.495, TEST 0.509) and macro-F1 is ~0.27, meaning it struggles to separate emotions beyond the most frequent/easy ones.
+	•	It performs best on “annoyance” and “mentioned_only”.
+	•	annoyance F1: 0.656 (VAL), 0.696 (TEST) → strong lexical cues (complaint words, negations, intensifiers) that TF-IDF can capture.
+	•	mentioned_only F1: 0.662 (VAL), 0.665 (TEST) → also often signaled by surface patterns (aspect mention without explicit affect).
+	•	It is poor on nuanced emotions and subtle classes. admiration, disappointment, satisfaction all sit around 0.21–0.36 F1, because TF-IDF can’t model context well (negation scope, contrast like “good but…”, discourse structure).
+	•	Rare classes are effectively impossible here. disgust/gratitude/mixed_emotions have supports 0–3 → the classifier learns almost nothing for them; those zeros are expected and they crush macro-F1.
+	•	Neutral is especially messy. Neutral recall is relatively higher than precision (e.g., VAL neutral recall 0.383 but precision 0.192): the model “guesses neutral” in many cases, but often incorrectly, because neutral language overlaps with mild satisfaction/disappointment lexically.
+
+⸻
+
+Why LogReg underperforms vs DistilRoBERTa (in plain terms)
+	•	TF-IDF is “bag of weighted words”: it sees which words appear, not how they relate in the sentence (word order and long-range dependencies are weak).
+	•	Aspect–emotion binding is shallow: you prepend the aspect, but TF-IDF treats it as just extra tokens; it doesn’t condition interpretation the way transformers do.
+	•	No deep context: phrases like “not bad”, “I expected better”, “good but overpriced” require compositional understanding. Transformer embeddings handle this much better.
+	•	Label imbalance dominates behavior: even with class_weight="balanced", rare labels don’t have enough examples to form reliable decision boundaries.
+	•	So it’s a solid sanity-check baseline, not a competitive model for ABSA emotion with nuanced labels.
+
+⸻
+
+What your v4 code is doing (few bullets)
+	•	Builds one input string per (text, aspect, polarity):
+ASPECT: ... | TEXT: ... | POLARITY: ...
+	•	Converts that into a sparse TF-IDF feature vector (1–2 grams), so each sample becomes a large sparse vector of word/phrase weights.
+	•	Trains multiclass Logistic Regression (softmax) with class balancing to reduce domination by frequent classes.
+	•	Evaluates on VAL and TEST with confusion matrices + classification reports, using consistent label IDs from train-only LabelEncoders (no leakage).
+	•	Saves reproducible artifacts: model, vectorizer, encoders, and metadata for reruns and deployment.
+
+⸻
+
+One important note (methodology fairness)
+
+Because v4 includes POLARITY as part of the input text, the model is getting a strong hint that is correlated with emotion. That’s okay if your real inference pipeline also knows polarity, but if polarity isn’t available at prediction time, you should remove it from the input to avoid an unrealistic advantage.
+
+If you want, I can also give you a 5-bullet “takeaway comparison” (LogReg vs v2 vs v3) for your report discussion section.

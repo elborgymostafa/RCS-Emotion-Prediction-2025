@@ -1,0 +1,24 @@
+Model Evaluation — What the Results Indicate
+	•	Overall accuracy (~65%) and weighted F1 (~0.64) show the model performs reasonably well on common emotion classes with sufficient training data.
+	•	Much lower macro-F1 (~0.39) signals uneven performance, mainly due to rare emotions with very few examples.
+	•	Stronger scores for classes like mentioned_only, annoyance, and admiration suggest contextual pretrained knowledge transferred effectively during fine-tuning.
+	•	Near-zero performance on rare labels (e.g., disgust, mixed_emotions) reflects data scarcity rather than model incapability.
+	•	Moderate performance on neutral indicates ambiguity in emotion boundaries and contextual subtlety typical in aspect-based emotion tasks.
+
+⸻
+
+Model Setup — Key Implementation Points
+	•	Aspect explicitly prepended to text so the model evaluates emotion relative to a specific target.
+	•	Pretrained DistilRoBERTa encoder supplies contextual linguistic knowledge instead of learning language structure from scratch.
+	•	Multi-task design: emotion classification is primary, polarity prediction acts as auxiliary regularization.
+	•	Transformer encoder output summarized via the first token representation for classification heads.
+	•	Evaluation tracks macro-F1, confusion matrices, and classification reports per epoch to monitor class-level behavior.
+
+⸻
+
+Supervised Fine-Tuning (SFT) — Input → Output Flow
+	•	Input combines aspect + review text into one sequence so the model learns aspect-conditioned emotion signals.
+	•	Tokenizer converts text into numerical tokens and attention masks understandable by the transformer.
+	•	Model outputs logits (unnormalized scores) for emotion and polarity classes.
+	•	Cross-entropy loss compares predicted labels with annotated ground truth during training.
+	•	Parameter updates adjust pretrained representations to specialize in aspect-based emotion classification.
