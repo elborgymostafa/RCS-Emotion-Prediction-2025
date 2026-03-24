@@ -321,7 +321,8 @@ for i, name in enumerate(list(polarity_encoder.classes_)):
 # ===============================
 # 4) TOKENIZER
 # ===============================
-MODEL_NAME = "distilroberta-base"
+#MODEL_NAME = "distilroberta-base"
+MODEL_NAME = "microsoft/deberta-base-mnli"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 # ===============================

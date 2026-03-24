@@ -252,7 +252,7 @@ for i, name in enumerate(EMOTION_NAMES):
 # 3) FEATURE BUILDING (TF-IDF)
 # ===============================
 def make_inputs(df: pd.DataFrame) -> pd.Series:
-    return ("ASPECT: " + df["aspect"].astype(str) + " | TEXT: " + df["text"].astype(str)).str.strip()
+    return ("ASPECT: " + df["aspect"].astype(str) + " | TEXT: " + df["text"].astype(str))
 
 X_train_text = make_inputs(train_df)
 X_val_text   = make_inputs(val_df)

@@ -1,0 +1,395 @@
+{% extends "base.html" %}
+{% set title = "ABSA Emotion Demo — classifier_v2" %}
+
+{% block content %}
+
+<!-- Header -->
+<div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+  <div>
+    <h3 class="mb-1">ABSA Emotion Demo <span class="chip">classifier_v2</span></h3>
+    <div class="text-muted">Row lookup (gold) + custom tester with Top-K + confidence bars.</div>
+  </div>
+  <div class="d-flex flex-wrap gap-2">
+    <span class="chip">Device <span class="mono">{{ meta.device }}</span></span>
+    <span class="chip">Weights <span class="mono">{{ meta.weights_file }}</span></span>
+  </div>
+</div>
+
+{% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+<div class="row g-3">
+
+  <!-- LEFT: Controls -->
+  <div class="col-lg-4">
+    <div class="sticky-col">
+
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <div class="fw-semibold mb-2">Runtime / Checkpoint</div>
+
+          <div class="small text-muted mb-1">Checkpoint</div>
+          <div class="mono small">{{ meta.checkpoint_dir }}</div>
+          <hr>
+
+          <div class="small text-muted mb-1">Run dir</div>
+          <div class="mono small">{{ meta.run_dir }}</div>
+          <hr>
+
+          <div class="row g-2">
+            <div class="col-6">
+              <div class="small text-muted">Model</div>
+              <div class="mono small">{{ meta.model_name }}</div>
+            </div>
+            <div class="col-6">
+              <div class="small text-muted">#Test rows</div>
+              <div class="mono small">{{ meta.num_test_rows }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <div class="fw-semibold mb-2">1) Test row lookup</div>
+          <form method="post" action="/predict_row" class="row g-2 align-items-end">
+            <div class="col-6">
+              <label class="form-label small text-muted mb-1">Row id (0-based)</label>
+              <input name="row_id" type="number" min="0" max="{{ meta.num_test_rows-1 }}"
+                     class="form-control mono" value="{{ row_mode.row_id if row_mode else 0 }}" required>
+            </div>
+            <div class="col-6">
+              <label class="form-label small text-muted mb-1">Top-K</label>
+              <input name="topk_row" type="number" min="1" max="20"
+                     class="form-control mono" value="{{ row_mode.topk if row_mode else default_topk }}">
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary w-100">Run row inference</button>
+              <div class="small text-muted mt-2">Shows ALL aspects inside that test row.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="fw-semibold mb-2">2) Crazy tester</div>
+          <form method="post" action="/predict_custom" class="row g-2">
+            <div class="col-12">
+              <label class="form-label small text-muted mb-1">Review text</label>
+              <textarea name="custom_text" class="form-control" rows="5"
+                        placeholder="Paste any review text...">{{ custom_mode.text if custom_mode else "" }}</textarea>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label small text-muted mb-1">Aspect (dropdown)</label>
+              <select name="custom_aspect" class="form-select mono">
+                <option value="">-- choose aspect --</option>
+                {% for a in aspects %}
+                  <option value="{{ a }}" {% if custom_mode and custom_mode.aspect==a %}selected{% endif %}>{{ a }}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label small text-muted mb-1">OR type custom aspect (overrides dropdown)</label>
+              <input name="custom_aspect_free" class="form-control mono" placeholder="e.g. ambience / drinks / staff">
+            </div>
+
+            <div class="col-6">
+              <label class="form-label small text-muted mb-1">Top-K</label>
+              <input name="topk_custom" type="number" min="1" max="20"
+                     class="form-control mono" value="{{ custom_mode.topk if custom_mode else default_topk }}">
+            </div>
+            <div class="col-6 d-flex align-items-end">
+              <button class="btn btn-success w-100">Run custom inference</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RIGHT: Results -->
+  <div class="col-lg-8">
+
+    {% if row_mode %}
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <div>
+              <div class="fw-semibold">Selected test row</div>
+              <div class="small text-muted">
+                row_id=<span class="mono">{{ row_mode.row_id }}</span>
+                · aspects=<span class="mono">{{ row_mode.outputs|length }}</span>
+                · topk=<span class="mono">{{ row_mode.topk }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 textblock">{{ row_mode.text }}</div>
+        </div>
+      </div>
+
+      <!-- Fancy per-aspect outputs -->
+      <div class="accordion" id="accRow">
+        {% for it in row_mode.predictions %}
+          {% set ok = (it.gold.emotion == it.pred.emotion.top1) %}
+
+          <div class="accordion-item mb-2 resp-card">
+            <h2 class="accordion-header" id="h{{ loop.index }}">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#c{{ loop.index }}"
+                      aria-expanded="false" aria-controls="c{{ loop.index }}">
+                <div class="d-flex flex-wrap gap-2 w-100 align-items-center">
+                  <span class="chip">Aspect <span class="mono">{{ it.aspect }}</span></span>
+                  <span class="chip">Gold <span class="mono">{{ it.gold.emotion }}</span></span>
+                  <span class="chip">Pred <span class="mono">{{ it.pred.emotion.top1 }}</span></span>
+                  <span class="chip">{{ "%.1f"|format(it.pred.emotion.top1_conf*100) }}%</span>
+                  <span class="chip">Pol <span class="mono">{{ it.pred.polarity.top1 }}</span></span>
+                  {% if ok %}
+                    <span class="badge text-bg-success">match</span>
+                  {% else %}
+                    <span class="badge text-bg-danger">mismatch</span>
+                  {% endif %}
+                </div>
+              </button>
+            </h2>
+
+            <div id="c{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="h{{ loop.index }}" data-bs-parent="#accRow">
+              <div class="accordion-body">
+
+                <!-- Gold vs Pred summary cards -->
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <div class="card border-warning resp-card">
+                      <div class="card-body">
+                        <div class="resp-title mb-2">Gold</div>
+                        <div class="mono kv">Emotion: <span class="label-strong">{{ it.gold.emotion }}</span></div>
+                        <div class="mono kv">Polarity: <span class="label-strong">{{ it.gold.polarity }}</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card border-success resp-card">
+                      <div class="card-body">
+                        <div class="resp-title mb-2">Prediction (Top-1)</div>
+                        <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
+                          <span class="badge text-bg-primary">Emotion: {{ it.pred.emotion.top1 }}</span>
+                          <span class="badge text-bg-light border pct">{{ "%.1f"|format(it.pred.emotion.top1_conf*100) }}%</span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 align-items-center">
+                          <span class="badge text-bg-success">Polarity: {{ it.pred.polarity.top1 }}</span>
+                          <span class="badge text-bg-light border pct">{{ "%.1f"|format(it.pred.polarity.top1_conf*100) }}%</span>
+                        </div>
+                        <div class="mt-2 small text-muted">
+                          Latency: <span class="mono">{{ "%.1f"|format(it.pred.latency_ms) }} ms</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fancy Top-K panels -->
+                <div class="row g-3">
+                  <!-- Emotion Top-K -->
+                  <div class="col-md-6">
+                    <div class="card resp-card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="resp-title">Emotion Top-{{ row_mode.topk }}</div>
+                          <span class="badge text-bg-light border mono">softmax</span>
+                        </div>
+
+                        {% for lab, pr in it.pred.emotion.topk %}
+                          <div class="d-flex justify-content-between align-items-end">
+                            <div class="label-strong">
+                              {{ lab }}
+                              {% if loop.index == 1 %}
+                                <span class="badge text-bg-primary ms-2">TOP-1</span>
+                              {% endif %}
+                            </div>
+                            <div class="mono pct">{{ "%.1f"|format(pr*100) }}%</div>
+                          </div>
+
+                          <div class="progress kbar striped mb-3"
+                               role="progressbar"
+                               aria-label="emotion {{ lab }}"
+                               aria-valuenow="{{ pr*100 }}" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: {{ pr*100 }}%"></div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Polarity Top-K -->
+                  <div class="col-md-6">
+                    <div class="card resp-card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="resp-title">Polarity Top-{{ row_mode.topk }}</div>
+                          <span class="badge text-bg-light border mono">softmax</span>
+                        </div>
+
+                        {% for lab, pr in it.pred.polarity.topk %}
+                          <div class="d-flex justify-content-between align-items-end">
+                            <div class="label-strong">
+                              {{ lab }}
+                              {% if loop.index == 1 %}
+                                <span class="badge text-bg-success ms-2">TOP-1</span>
+                              {% endif %}
+                            </div>
+                            <div class="mono pct">{{ "%.1f"|format(pr*100) }}%</div>
+                          </div>
+
+                          <div class="progress kbar striped mb-3"
+                               role="progressbar"
+                               aria-label="polarity {{ lab }}"
+                               aria-valuenow="{{ pr*100 }}" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: {{ pr*100 }}%"></div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Optional details -->
+                <div class="mt-3">
+                  <button class="btn btn-outline-primary btn-sm" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#details{{ loop.index }}"
+                          aria-expanded="false" aria-controls="details{{ loop.index }}">
+                    Show details (full distributions + exact model input)
+                  </button>
+
+                  <div class="collapse mt-3" id="details{{ loop.index }}">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="card resp-card">
+                          <div class="card-body">
+                            <div class="resp-title mb-2">Emotion — all labels</div>
+                            {% for lab, pr in it.pred.emotion.all %}
+                              <div class="d-flex justify-content-between small">
+                                <span class="mono">{{ lab }}</span>
+                                <span class="mono">{{ "%.1f"|format(pr*100) }}%</span>
+                              </div>
+                              <div class="progress kbar mb-2">
+                                <div class="progress-bar" style="width: {{ pr*100 }}%"></div>
+                              </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="card resp-card">
+                          <div class="card-body">
+                            <div class="resp-title mb-2">Polarity — all labels</div>
+                            {% for lab, pr in it.pred.polarity.all %}
+                              <div class="d-flex justify-content-between small">
+                                <span class="mono">{{ lab }}</span>
+                                <span class="mono">{{ "%.1f"|format(pr*100) }}%</span>
+                              </div>
+                              <div class="progress kbar mb-2">
+                                <div class="progress-bar" style="width: {{ pr*100 }}%"></div>
+                              </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-2 small text-muted">Exact model input:</div>
+                    <div class="mono small">{{ it.pred.formatted_input }}</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if custom_mode %}
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <div class="fw-semibold">Custom input</div>
+          <div class="small text-muted mb-2">
+            aspect=<span class="mono">{{ custom_mode.aspect }}</span> · topk=<span class="mono">{{ custom_mode.topk }}</span>
+          </div>
+          <div class="textblock">{{ custom_mode.text }}</div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm resp-card">
+        <div class="card-body">
+          <div class="fw-semibold mb-2">Prediction</div>
+
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="chip">Emotion <span class="mono">{{ custom_mode.pred.emotion.top1 }}</span></span>
+            <span class="chip">{{ "%.1f"|format(custom_mode.pred.emotion.top1_conf*100) }}%</span>
+            <span class="chip">Polarity <span class="mono">{{ custom_mode.pred.polarity.top1 }}</span></span>
+            <span class="chip">{{ "%.1f"|format(custom_mode.pred.polarity.top1_conf*100) }}%</span>
+            <span class="chip">Latency <span class="mono">{{ "%.1f"|format(custom_mode.pred.latency_ms) }}ms</span></span>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card resp-card">
+                <div class="card-body">
+                  <div class="resp-title mb-2">Emotion Top-{{ custom_mode.topk }}</div>
+                  {% for lab, pr in custom_mode.pred.emotion.topk %}
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div class="label-strong">
+                        {{ lab }} {% if loop.index == 1 %}<span class="badge text-bg-primary ms-2">TOP-1</span>{% endif %}
+                      </div>
+                      <div class="mono pct">{{ "%.1f"|format(pr*100) }}%</div>
+                    </div>
+                    <div class="progress kbar striped mb-3"><div class="progress-bar" style="width: {{ pr*100 }}%"></div></div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card resp-card">
+                <div class="card-body">
+                  <div class="resp-title mb-2">Polarity Top-{{ custom_mode.topk }}</div>
+                  {% for lab, pr in custom_mode.pred.polarity.topk %}
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div class="label-strong">
+                        {{ lab }} {% if loop.index == 1 %}<span class="badge text-bg-success ms-2">TOP-1</span>{% endif %}
+                      </div>
+                      <div class="mono pct">{{ "%.1f"|format(pr*100) }}%</div>
+                    </div>
+                    <div class="progress kbar striped mb-3"><div class="progress-bar" style="width: {{ pr*100 }}%"></div></div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-2 small text-muted">Exact model input:</div>
+          <div class="mono small">{{ custom_mode.pred.formatted_input }}</div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if not row_mode and not custom_mode %}
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="fw-semibold mb-1">No results yet</div>
+          <div class="text-muted">Use the left panel to lookup a test row or run a custom review.</div>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}
