@@ -7,8 +7,10 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+00-Organization.pdf
 paper.zip
 paper/
+personal/
 .Python
 build/
 develop-eggs/
@@ -207,3 +209,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Submission folders (compiled PDFs, personal content)
+daniel-submission/
+group-submission/
+
+# Group declaration signatures
+group-declaration/

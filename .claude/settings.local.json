@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source .venv/bin/activate)",
+      "Bash(python3 -c \":*)",
+      "Bash(pip3 install:*)",
+      "Bash(xelatex -interaction=nonstopmode daniel-individual.tex)",
+      "Bash(xelatex -interaction=nonstopmode individual_contribution_v3.tex)",
+      "Bash(xelatex -interaction=nonstopmode individual_contribution_v4.tex)",
+      "Bash(./render.sh main_v5.tex)"
+    ]
+  }
+}
