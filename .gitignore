@@ -210,6 +210,9 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# Claude Code settings
+.claude/
+
 # Submission folders (compiled PDFs, personal content)
 daniel-submission/
 group-submission/
